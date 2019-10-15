@@ -1,0 +1,12 @@
+{
+  "name": "blockrpg-login",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/wrule/blockrpg-login",
+  "author": "鸡毛 <shihao.gu@perfma.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "blockrpg-core": "^1.5.2"
+  }
+}
