@@ -8,7 +8,7 @@ const router = new Router();
 
 // 注册玩家
 // 注册成功之后会返回新的玩家信息
-router.post('/api/player/register', async (ctx, next) => {
+router.post('/api/login/player/register', async (ctx, next) => {
   const params = ctx.request.body;
   const name: string = (params.name || '').trim();
   const password: string = (params.password || '').trim();
@@ -36,7 +36,7 @@ router.post('/api/player/register', async (ctx, next) => {
 // 此操作会在服务器内设置Session
 // 登录成功返回Session以及玩家信息
 // 若登录成功，此接口会通过Cookie设置Session
-router.post('/api/player/login', async (ctx, next) => {
+router.post('/api/login/player/login', async (ctx, next) => {
   const params = ctx.request.body;
   const input: string = (params.input || '').trim();
   const password: string = (params.password || '').trim();
