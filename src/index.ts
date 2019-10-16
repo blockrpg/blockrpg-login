@@ -1,21 +1,10 @@
 import Koa from 'koa';
 import Router from 'koa-router';
-import KoaBodyParser from 'koa-bodyparser';
+import * as BRCore from 'blockrpg-core';
 import OutsideController from './Module/Outside/Controller';
-import { Rsp } from 'blockrpg-core/built/Koa/Rsp';
 
-const app = new Koa();
-const router = new Router();
+const app = new BRCore.Koa.App((app) => {
+  return app.use(OutsideController);
+});
 
-async function main() {
-  app
-    .use(KoaBodyParser())
-    .use(OutsideController)
-    .use(router.allowedMethods())
-    .use((ctx, next) => {
-      Rsp.Error(ctx, 404, '资源不存在');
-    });
-  app.listen(3000);
-}
-
-main();
+app.Listen(3000);
