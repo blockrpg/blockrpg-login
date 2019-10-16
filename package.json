@@ -2,11 +2,19 @@
   "name": "blockrpg-login",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "node built/index.js"
+  },
   "repository": "https://github.com/wrule/blockrpg-login",
   "author": "鸡毛 <shihao.gu@perfma.com>",
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "blockrpg-core": "^1.5.2"
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-router": "^7.0.42",
+    "blockrpg-core": "^1.5.3",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0"
   }
 }
