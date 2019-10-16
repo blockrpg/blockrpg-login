@@ -5,6 +5,6 @@ import OutsideController from './Module/Outside/Controller';
 
 const app = new BRCore.Koa.App((app) => {
   return app.use(OutsideController);
-});
+}, false);
 
 app.Listen(3000);
