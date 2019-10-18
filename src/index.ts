@@ -3,8 +3,8 @@ import Router from 'koa-router';
 import * as BRCore from 'blockrpg-core';
 import OutsideController from './Module/Outside/Controller';
 
-const app = new BRCore.Koa.App((app) => {
+const app = new BRCore.Koa.App('login', (app) => {
   return app.use(OutsideController);
 }, false);
 
-app.Listen(3001);
+app.Listen();
